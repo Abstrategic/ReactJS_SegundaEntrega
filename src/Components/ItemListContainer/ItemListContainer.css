@@ -1,0 +1,22 @@
+.containerItemlist{
+    position: absolute;
+    top: 56px;
+    left: 0px;
+    margin-left:9vw;
+    margin-top: 24px;
+
+    color: #262327;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font: bold 0.8rem sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 14px;
+    /* identical to box height */
+
+    letter-spacing: -0.409091px;
+}

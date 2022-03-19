@@ -1,0 +1,19 @@
+.navlist{
+    font: bold 0.8rem sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height */
+
+    letter-spacing: -0.409091px;
+
+    color: #FFFFFF;
+    list-style:none;
+    margin-right: 15px;
+    transition: all 0.15s ease-in-out;
+    transition-property: color, background-color;
+}
+.navlist:hover {
+    color: rgb(177, 177, 30);
+}

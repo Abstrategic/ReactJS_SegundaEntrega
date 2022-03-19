@@ -1,0 +1,32 @@
+.cart-container{
+    width: 20px;
+    font: bold 0.8rem sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height */
+
+    letter-spacing: -0.409091px;
+
+    color: #FFFFFF;
+    list-style:none;
+    margin-right: 15px;
+    transition: all 0.15s ease-in-out;
+    transition-property: color, background-color;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Cartlogo{
+    width: 16px;
+}
+.bulletCart{
+    margin-left: 8px;
+}
+.cart-container:hover {
+    color: rgb(177, 177, 30);
+}
+.Cartlogo:hover{
+    fill: rgb(177, 177, 30);
+}

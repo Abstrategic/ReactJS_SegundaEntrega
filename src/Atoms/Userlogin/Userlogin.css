@@ -1,0 +1,17 @@
+.Buttom{
+  color: yellow;
+  padding: 0.8rem 1.25rem;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  transition: all 0.15s ease-in-out;
+  transition-property: color, background-color;
+  font: bold 0.8rem sans-serif;
+}
+
+.Buttom:hover {
+    color: rgb(177, 177, 30);
+}
+
