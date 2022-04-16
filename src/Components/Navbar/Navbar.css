@@ -1,10 +1,4 @@
 .Navbar{
-    position:fixed;
-    width: 100%;
-    height: 56px;
-    left: 0px;
-    top: 0px;
-
     background: #262327;
     display: flex;
     flex-direction: row;
@@ -18,7 +12,7 @@
     margin-left:40vw;
 }
 
-.Navmenu {
+.Categories {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

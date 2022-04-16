@@ -1,13 +1,9 @@
 .containerItemlist{
-    position: absolute;
-    top: 56px;
-    left: 0px;
-    margin-left:9vw;
-    margin-top: 24px;
-
+    
     color: #262327;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 h1{
@@ -16,7 +12,10 @@ h1{
     font-weight: 900;
     font-size: 26px;
     line-height: 14px;
+    text-align: left;
     /* identical to box height */
+
+    color: white;
 
     letter-spacing: -0.409091px;
 }

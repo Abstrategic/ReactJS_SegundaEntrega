@@ -1,0 +1,32 @@
+.socialBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.SocialContainer{
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+
+    opacity: 0.25;
+    /* White */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border: 1.33333px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+.socialLogo{  
+    align-self: center;
+}
+#linkedin{
+    margin-bottom: 7px;
+    margin-left: 2px;
+}

@@ -2,8 +2,8 @@ import './Navlist.css'
 
 const Navlist = (props) => {
     return (
-        <li class="navlist">
-            <buttom class="Botom" type="buttom">{props.name}</buttom>
+        <li className="navlist">
+            <p className="Botom" type="buttom">{props.name}</p>
         </li>
     )
     }

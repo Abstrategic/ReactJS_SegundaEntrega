@@ -1,0 +1,11 @@
+.listContainer{
+    width: fit-content ;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* margin-left: -72px; */
+}
+.cardCta{
+    color: white !important; 
+}

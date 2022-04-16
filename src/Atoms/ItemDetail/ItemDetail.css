@@ -1,0 +1,140 @@
+.ItemDetail{
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.headerItem{
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.itemImg{
+    position: relative;
+    top: 16px;
+    left: 0px;
+    height: max-content;
+    border-radius: 8px;
+    width: 342px;
+    height: 211px;
+}
+.descContainer{
+    height: max-content;
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.titleContent{
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ItemCategory{
+
+    height: max-content;
+
+    width: 44px;
+    height: 12px;
+    margin-left: 18px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #FFFFFF;
+
+}
+.itemTitle{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 17px;
+    width: max-content;
+    color: #FFFFFF;
+    
+
+}
+.shortItem{
+
+    position: relative;
+    top:-20px;
+    left: 0px;
+
+    width: 335px;
+    height: max-content;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: left;
+
+    color: #FFFFFF;
+}
+.prcItm{
+    position: relative;
+    top: -16px;
+    left: 0px;
+
+    width: max-content;
+    height: max-content;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 17px;
+    text-align: left;
+    letter-spacing: -1.6px;
+
+    color: #FFFFFF;
+
+}
+.Divider{
+    position: relative;
+    left: -50px;
+    top: 0px;
+    margin-top: 32px;
+    width: 620px;
+    height: 1px;
+    background-color: #FFFFFF;
+}
+.desContainer{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.descTitle{
+    
+    width: max-content;
+    Text-align: left;
+    color: #FFFFFF;
+    
+}
+.longDesc{
+    width: 702px;
+    height: 34px;
+    Text-align: left;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.2778px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+}

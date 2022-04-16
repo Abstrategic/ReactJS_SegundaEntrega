@@ -1,12 +1,20 @@
 import './Cartwidget.css'
 import Cart from '../../img/cart.svg'
+import CartContext from '../../context/CartContext'
+import { useContext } from 'react'
 
 const Cartwidget = (props) => {
+    const {getQuantity} = useContext(CartContext)
+
+    if ( getQuantity() === 0) {
+        return null
+    }
+
     return (
         <>
-        <div class="cart-container">
-            <img class= "Cartlogo" src={Cart} alt="logoAbstrategic"></img>
-            <p class="bulletCart">{props.number}</p>
+        <div className="cart-container">
+            <img className= "Cartlogo" src={Cart} alt="logoAbstrategic"></img>
+            <p className="bulletCart">{getQuantity()}</p>
         </div></>
     )
     }
