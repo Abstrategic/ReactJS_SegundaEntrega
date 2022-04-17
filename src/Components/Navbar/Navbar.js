@@ -20,7 +20,9 @@ function Navbar() {
                     <NavLink to='/category/Consolas' className={({isActive}) => isActive ? 'navlistActive' : 'navlist' }>Consolas</NavLink>
                     <NavLink to='/category/Perifericos' className={({isActive}) => isActive ? 'navlistActive' : 'navlist' }>Perifericos</NavLink>
                 </div>
-                <Cartwidget number="1"/>
+                <NavLink to='/cart' className={({isActive}) => isActive ? 'navlistActive' : 'navlist' }>
+                    <Cartwidget number="1"/>
+                </NavLink>
                 <Userlogin cta ="Login"/>
             </div>
         </nav>

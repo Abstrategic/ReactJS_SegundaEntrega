@@ -1,0 +1,366 @@
+.titlSect{
+    margin-left: 30vh;
+}
+.CartContainer{
+    margin-left: 26vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.cartItemcard{
+    margin-top: 24px;
+    
+    display: flex;
+    flex-direction: row;
+
+    width: 356px;
+    height: 120px;
+
+    background: white;
+    border-radius: 8px;
+    filter: drop-shadow(3px 7px 10px rgba(0, 0, 0, 0.25));
+}
+.crtItmImg{
+    width: 140px;
+    height: 120px;
+    border-radius: 8px 0px 0px 8px;
+}
+.componentContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.crtTitle{
+    height: min-content;
+    width:fit-content;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.409091px;
+
+    color: #000000;
+}
+.quantContainer{
+    position: relative;
+    top: -40px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+
+}
+.quantLabel{
+    position: relative;
+    top: 21px;
+    left: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 160% */
+
+    letter-spacing: -0.409091px;
+
+    color: #000000;
+
+}
+.quantItm{
+    position: relative;
+    top: 18px;
+    left: 0px;
+    margin-left: 8px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    letter-spacing: -0.409091px;
+    
+    color: #000000;
+}
+.priceLabel{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.409091px;
+
+    color: #000000;
+}
+.priceItm{
+    position: relative;
+    top: -12px;
+    left: 0px;
+    margin-left: 8px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    /* or 156% */
+
+    letter-spacing: -0.409091px;
+
+    color: #000000;
+}
+.closeIcon{
+    position: relative;
+    top: -150px;
+    left: 170px;
+    height: 16px;
+    width: 16px;
+}
+.breakdwnCart{
+    margin-top: 24px;
+    margin-right: 32vh;
+    margin-bottom: 56px;
+    width: max-content;
+    height: max-content;
+    padding: 24px;
+
+    background: #262327;
+    border-radius: 8px;
+    filter: drop-shadow(3px 7px 10px rgba(0, 0, 0, 0.25));
+}
+.itmBreak{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.itmCntr{
+    
+    display: flex;
+    flex-direction: column;
+}
+.dvdBr{
+    position: relative;
+    top: -20px;
+    left: 0px;
+    height: 1px;
+    width: 220px;
+    background: rgba(66, 63, 63, 1);
+}
+.titleBrk{
+    color: #BFBFBF;
+    margin-bottom: 56px;
+    margin-left: -3px;
+
+    text-align: left;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 19px;
+    letter-spacing: -0.409091px;
+}
+.itmName{
+    
+    width: max-content;
+    height: 19px;
+    
+    text-align: left;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.409091px;
+
+    color: #BFBFBF;
+}
+.itmQntt{
+    position: relative;
+    top: -24px;
+    left:0px;
+    width: 19px;
+    height: 16px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.409091px;
+
+    color: #BFBFBF;
+
+}
+.itmPrc{
+
+    text-align: right;
+    margin-right: 8px;
+    width: 53px;
+    height: 19px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.409091px;
+
+    color: #BFBFBF;
+
+}
+.dvdCart{
+    
+    width: 203px;
+    height: 0px;
+
+
+    border: 1px solid rgba(0, 0, 0, 0.27);
+}
+.itmBi{
+
+    width: max-content;
+    height: 15px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    letter-spacing: -0.409091px;
+
+    color: #BFBFBF;
+
+}
+.fnlPrice{
+
+    width: max-content;
+    height: 25px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: -0.409091px;
+
+    color: #BFBFBF;
+
+}
+
+.emptyContainer{
+    margin-left: 60vh;
+    padding: 24px;
+    width: 365px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgEmpty{
+    margin-top: 56px;
+}
+.titlEmpt{
+    margin-top: 32px;
+    width: 219px;
+    height: 21px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17.1333px;
+    line-height: 21px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+.bdEmpty{
+    position: relative;
+    top:-20px;
+    left:0px;
+    width: 303px;
+    height: 34px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.2778px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #CECECE;;
+}
+.cleanContainer{
+    margin-top: 56px;
+    margin-left: 40px;
+}
+.directionLink{
+    position: relative;
+    top: -24px;
+    left:0px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 17px;
+    width: max-content;
+    color: #FFFFFF;
+
+    text-decoration: none;
+    
+    transition: all 0.15s ease-in-out;
+    transition-property: color, background-color;
+}
+.directionLink:hover {
+    color: rgb(177, 177, 30);
+}
+
+.btn {
+    color: white;
+    border: 1px solid rgba(66, 63, 63, 1);
+    background: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 400;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgb(177, 177, 30);
+    z-index: -1;
+    transition: 0.8s;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.btn:hover{
+    color: #262327;
+}
+.btn:hover::before{
+    height: 180%;
+}

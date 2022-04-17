@@ -1,0 +1,48 @@
+.item-shop{
+    width: 257px;
+    height: 371.22px;
+
+    background: #262327;
+    border-radius: 12px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+
+    filter: drop-shadow(3px 7px 10px rgba(0, 0, 0, 0.25));
+    
+}
+.img-item{
+    width: 257px;
+    height: 165.62px;
+    border-radius: 12px 12px 0px 0px;
+}
+h2{
+    width: max-content;
+    margin-left: 16px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17.1333px;
+    line-height: 21px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+.content-item{
+
+    width: max-content;
+    height: 72px;
+    width: 220px;
+    margin-left: 16px;
+    
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.2778px;
+    line-height: 17px;
+    text-align: left;
+
+    color: #FFFFFF;
+
+}

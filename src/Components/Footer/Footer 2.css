@@ -1,0 +1,58 @@
+.footerContainer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+    height: 528px;
+
+
+    background: #262327;
+}
+.ftrContent{
+    margin-top: 72px;
+    align-self: center;
+}
+
+.socialBar{
+    width: 954.67px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+.contactContainer{
+    width: 954.67px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.textContact{
+    width: 585.78px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.4444px;
+    line-height: 20px;
+    /* or 157% */
+
+    text-align: center;
+
+    /* White */
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+}
+.DividerFooter{
+    margin-top: 40px;
+    margin-bottom: 48px;
+    width: 954.67px;
+    height: 1px;
+
+    background: #FFFFFF;
+    opacity: 0.25;
+}
