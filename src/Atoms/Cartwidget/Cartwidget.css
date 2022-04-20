@@ -1,4 +1,7 @@
 .cart-container{
+    position: relative;
+    left: 0px;
+    bottom:-12px;
     width: 20px;
     font: bold 0.8rem sans-serif;
     font-style: normal;

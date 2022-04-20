@@ -257,6 +257,74 @@
     color: #BFBFBF;
 
 }
+.successContainer{
+    margin-left: 60vh;
+    padding: 24px;
+    width: 365px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stSuccess{
+
+    width: 303px;
+    height: auto;
+    margin-top: 24px;
+    margin-bottom: 40px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #CECECE;;
+
+}
+.ordDetCont{
+    padding: 16px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.bd{
+    width: 303px;
+    height: auto;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.2778px;
+    
+    text-align: center;
+
+    color: #CECECE;
+
+}
+.bdSuccs{
+
+    width: auto;
+    position: relative;
+    left: 0px;
+    top:-20px;
+    margin-top: -8px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.2778px;
+    
+    text-align: left;
+
+    color: #CECECE;
+}
 
 .emptyContainer{
     margin-left: 60vh;
@@ -304,7 +372,7 @@
     line-height: 17px;
     text-align: center;
 
-    color: #CECECE;;
+    color: #CECECE;
 }
 .cleanContainer{
     margin-top: 56px;
@@ -364,3 +432,33 @@
 .btn:hover::before{
     height: 180%;
 }
+.formContainer{
+    margin-left: 40px;
+    width: 286px;
+    height: 520px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    
+    border-radius: 16px;
+    border-color: grey;
+    
+}
+.contAddress{
+    margin-bottom: 16px;
+}
+.dvdAd{
+    margin-top: 32px;
+    height: 1px;
+    width: 220px;
+    background: rgba(66, 63, 63, 1);
+}
+.subtlt{
+    margin-left: 40px;
+}
+
+

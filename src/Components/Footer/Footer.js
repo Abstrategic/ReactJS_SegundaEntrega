@@ -1,5 +1,6 @@
 import './Footer.css'
 import SocialItem from "../../Atoms/SocialItem/SocialItem"
+import Logofooter from '../../img/logo.png'
 
 function Footer() {
 
@@ -7,14 +8,14 @@ function Footer() {
         <div className="footerContainer">
             <div className='ftrContent'>
                 <div className='contactContainer'>
-                    <h1>Seasoned. Nimble. Remote.</h1>
-                    <p className='textContact'>We’re a diverse and passionate team that takes ownership of your design and empower you to execute the roadmap. We stay light on our feet and truly enjoy delivering great work.</p>
+                    <h1>Electónica. Novedad. Rapidez.</h1>
+                    <p className='textContact'>Geek Factory es una empresa comercializadora de partes electrónicas cuya principal misión es acercar las tecnologías más innovadoras al público hispanohablante.</p>
                     <button type='button'>Contact me</button>
                 </div>
                 <div className='DividerFooter'></div>
                 <div className='socialBar'>
-                    <img src='image.jpg' alt='text 1'></img>
-                    <h5>© 2022 Abstrategic Media. All Rights Reserved. </h5>
+                    <img className='imgLogo' src={Logofooter} alt='text 1'></img>
+                    <h5 className='copyright'>© 2022 Abstrategic Media. All Rights Reserved. </h5>
                     <SocialItem/>
                 </div>
             </div>

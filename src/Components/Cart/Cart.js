@@ -1,70 +1,80 @@
-import { useContext } from "react"
-import CartContext from "../../context/CartContext"
-import './Cart.css'
+import { useContext, useReducer, useState, useEffect } from "react"
+import { NavLink } from 'react-router-dom'
+import { createOrderAndUpdateStock, getOrders } from "../../services/firebase/firestore"
 import CloseIcon from '../../img/close.png'
 import EmptyImg from '../../img/Empty.png'
-import { NavLink } from 'react-router-dom'
-import { addDoc, collection, firestore, updateDoc, getDocs, query, where, documentId, writeBatch } from 'firebase/firestore'
-import {firestoreDb} from '../../services/firebase'
+import Successimg from '../../img/success.png'
+import Formlist from "../../Atoms/Formlist/Formlist"
+import CartContext from "../../context/CartContext"
+import './Cart.css'
 
-
-
+const formReducer = (state, event) => {
+    return {
+        ...state,
+        [event.name]: event.value
+    }
+}
 
 const Cart = () => {
 
     const {cart, clearCart, removeItem, totalAmount} = useContext(CartContext)
-    console.log(cart)
+    const [formData, setFormData] = useReducer(formReducer, {})
+    const [submitting, setSubmitting] = useState(false);
+    const [successfull, setSuccessfull] = useState(false)
+    const [orderID, setOrderID] = useState()
     const AmountCart = totalAmount()
+    
     const createOrder = () =>{
 
-        const objOrdder = {
-            buyer: {
-                name : 'Jose Luis',
-                phone: '3763736373',
-                email: 'joseluis@gmail.com'
-            },
+        const objOrder = {
+            buyer : formData,
             items : cart,
             total : totalAmount()
         }
-        // const batch = writeBatch(firestoreDb)
-        // const outOfStock = []
 
-        // const ids = cart.map(prod => prod.id)
-        // const collectionRef = collection (firestoreDb, 'products')
-        
-        // getDocs(query(collectionRef, where(documentId(), 'in', ids))
-        // .then(response=>{
-
-        //     response.doc.forEach ( doc =>{
-        //         const dataDoc = doc.data()
-        //         const prodQuantity = objOrdder.items.find(prod => prod.id === doc.id).quantity
-        //         if(dataDoc.stock >= prodQuantity){
-        //             batch.update(doc.ref, {stock: dataDoc.stock - prodQuantity})
-        //         } else{
-        //             outOfStock.push({ id: doc.id, dataDoc})
-        //         }
-        //     })
-        // }).then ( ()=>{
-        //     if(outOfStock.length === 0 ){
-        //         const collectionRef = collection ( firestoreDb, 'orders')
-        //         addDoc(collectionRef, objOrdder)
-        //     } else {
-        //         return Promise.reject({ name : 'outOfStockError', products: 'outOfStock'})
-        //     }
-        // }).then(()=> {
-        //     batch.commit()
-        // }).catch((error)=>{
-        //     if(error && error.name === 'outOfStockError' && error.products.length >0) {
-        //         console.log(error.products)
-        //     } else {
-        //         console.log(error)
-        //     }
-        // })
-        
+        createOrderAndUpdateStock(cart, objOrder).then(id => {
+            clearCart()
+            setSuccessfull(true)
+            setOrderID(id)
+            
+        }).catch((error) => {
+            if(error && error.name === 'outOfStockError' && error.products.length > 0) {
+                console.log(error)
+            }
+        })
     }
 
-    
-    
+    const handleSubmit = event =>{
+        event.preventDefault();
+        setSubmitting(true);
+    }
+
+    const handleChange = event =>{
+
+        setFormData({
+            name: event.target.name,
+            value: event.target.value
+        })
+    }
+
+    if(successfull === true) {
+
+        return (
+        <div className="successContainer">
+            <img className="imgEmpty" src={Successimg} alt='Empty image'></img>
+            <p className="titlEmpt">Your order was sucessfully sended</p>
+            <p className="bd">We have just sent your online invoice to the email address <b>{formData.email}</b></p>
+            <p className="stSuccess">Order Details</p>
+            <div className="ordDetCont">
+                <p className="bdSuccs">Order ID :  <b>{orderID}</b></p>
+                <p className="bdSuccs">Name :  <b>{formData.name}</b></p>
+                <p className="bdSuccs">Address :  <b>{formData.address}</b></p>
+            </div>
+            
+            <NavLink to='/' className="directionLink">Back to home</NavLink>
+        </div>
+        )
+    }
 
     if(cart.length === 0) {
         return (
@@ -77,14 +87,13 @@ const Cart = () => {
         )
     }
 
-
-
     return(
         
         <div className="cartContainer">
             <h1 className="titlSect">Carrito de compra</h1>
             <div className="CartContainer">
             <div className="artSide">
+                <h2 className="subtlt">Listado de articulos</h2>
                 <ul>
                         {cart.map(prod => 
                         <li className="cartItemcard" key={prod.id}>
@@ -108,10 +117,34 @@ const Cart = () => {
                 <div className="cleanContainer">
                     <p className="directionLink" onClick={clearCart}>Clear Cart</p>
                 </div>
-                
+                <div className="formDelivery">
+                    <h2 className="subtlt">Direccion de envio</h2>
+                    <form onSubmit={handleSubmit}>
+                        <fieldset className="formContainer" disabled={submitting}>
+                            <Formlist label='Numbre' name='name' type='text' evento={handleChange}/>
+                            <Formlist label='Telefono' name='phone' type='phone' evento={handleChange}/>
+                            <Formlist label='Email' name='email' type='email' evento={handleChange}/>
+                            <Formlist label='Direccion de entrega' name='address' type='text' evento={handleChange}/>
+                            <Formlist label='Ciudad' name='city' type='text' evento={handleChange}/>
+                            <Formlist label='Codigo Postal' name='zip' type='number' evento={handleChange}/>
+                        </fieldset>
+                        <button type="submit" className="btn" disabled={submitting}>Submit</button>
+                    </form>
+                </div>
             </div>
             <div className="breakdwnCart">
                     <h2 className="titleBrk">Desglose de la compra</h2>
+                    
+                    {submitting &&
+                        <div className="contAddress">
+                            <h3 className="itmName">Datos de entrega</h3>
+                            <p className="itmBi">{formData.name}</p>
+                            <p className="itmBi">{formData.address} {formData.zip} {formData.city}</p>
+                            <p className="itmBi">{formData.phone}</p>
+                            <p className="itmBi">{formData.email}</p>
+                            <div className="dvdAd"></div>
+                        </div>}
+                    
                     {cart.map(prod => 
                     <div className="itemConten"> 
                         <div className="itmBreak">
@@ -123,26 +156,23 @@ const Cart = () => {
                         </div>
                         <div className="dvdBr"></div>
                     </div>
-                    
-                    
-                    
                     )}
+
                     <p className="itmBi">Base imponible {AmountCart}€</p>
                     <p className="itmBi">Impuesto 21% {AmountCart*0.21}€</p>
                     <p className="itmBi">Total a pagar</p>
                     <p className="fnlPrice">{AmountCart + (AmountCart*0.21)} €</p>
-                    <button className="btn">Pagar ahora</button>
+                    {submitting &&
+                        <button className="btn" onClick={createOrder}>Pagar ahora</button>
+                    }
+                    
                     
             </div>
-
             </div>
-            
-            
-
         </div>
+        
         
     )
 }
 
 export default Cart
-// onClick={createOrder}

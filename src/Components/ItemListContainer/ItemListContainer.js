@@ -9,10 +9,8 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const {categoryId} = useParams()
     
-
     useEffect(()  => {
 
-        // if (categoryId) {
             getProducts(categoryId).then(items =>{
                 setProducts(items)
             }).catch(err =>{
@@ -25,8 +23,6 @@ const ItemListContainer = () => {
 
     }, [categoryId])
 
-
-    console.log(products)
     return (
         
         <div className ="containerItemlist">

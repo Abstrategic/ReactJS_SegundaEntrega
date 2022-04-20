@@ -8,8 +8,8 @@
 
 
 .SocialContainer{
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     margin-right: 16px;
 
     opacity: 0.25;
@@ -23,9 +23,20 @@
     box-sizing: border-box;
     border-radius: 25px;
 }
-.socialLogo{  
+.socialLD{ 
+    width: 14px;
     align-self: center;
 }
+.socialTW{
+    width: 14px;
+    align-self: center;
+}
+.socialFB{
+    height: 14px;
+    width: 8px;
+    align-self: center;
+}
+
 #linkedin{
     margin-bottom: 7px;
     margin-left: 2px;

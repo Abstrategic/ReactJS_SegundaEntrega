@@ -1,21 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useReducer } from "react";
 
 const Context = createContext()
 
 export const CartContextProvider = ({ children }) => {
+
     const [ cart, setCart] = useState([])
-    console.log(cart)
 
     const addItem = (product, quantity) => {
-
-        // const objItemCart = {...product, quantity}
-        // setCart([...cart, objItemCart])
 
         let repetido=false;
         cart.map((prod) => {
             if(prod.id===product.id){
                 prod.quantity = prod.quantity + quantity;
-                console.log(prod.quantity)
                 
                 if (prod.quantity >= product.stock){
                     prod.quantity = product.stock;
@@ -69,15 +65,6 @@ export const CartContextProvider = ({ children }) => {
         });
         return total
     }
-
-    // const totalItem = ()=>{
-    //     let total = 0
-    //     cart.forEach(prod => {
-    //         prod.price * prod.quantity
-    //     });
-    //     return total
-    // }
-    
 
     return(
         <Context.Provider value={{cart, addItem, clearCart, getQuantity,removeItem,isInCart,totalAmount,totalItem}}>

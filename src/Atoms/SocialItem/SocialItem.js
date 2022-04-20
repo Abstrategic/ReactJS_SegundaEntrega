@@ -9,13 +9,13 @@ function SocialItem() {
     return (
         <div className='socialBox'>
             <div className="SocialContainer">
-            <img className='socialLogo' src = {fb} alt="logo facebook media"></img>
+            <img className='socialFB' src = {fb} alt="logo facebook media"></img>
             </div>
             <div className="SocialContainer">
-            <img src = {tw} alt="logo Social media" className='socialLogo'></img>
+            <img src = {tw} alt="logo Social media" className='socialTW'></img>
             </div>
             <div className="SocialContainer">
-            <img src = {ig} alt="logo instagram media" className='socialLogo' id='linkedin'></img>
+            <img src = {ig} alt="logo instagram media" className='socialLD' id='linkedin'></img>
             </div>
 
         </div>

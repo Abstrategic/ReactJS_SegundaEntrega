@@ -56,3 +56,10 @@
     background: #FFFFFF;
     opacity: 0.25;
 }
+.copyright{
+    color: white;
+}
+.imgLogo{
+    margin-top: 19px;
+    height: max-content;
+}

@@ -5,14 +5,10 @@ import ItemDetail from "../../Atoms/ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 
-
-
 const ItemDetailContainer = ({addToCart, cart}) => {
 
     const [ products, setProduct] = useState([])
     const {id} = useParams()
-
-    console.log(products)
 
     useEffect(() => {
 
@@ -23,12 +19,10 @@ const ItemDetailContainer = ({addToCart, cart}) => {
         })
     },[id])
     
-    
     return (
         
         <div className ="ItemDetailContainer">
             <ItemDetail {...products} addToCart={addToCart} cart={cart}> </ItemDetail>
         </div>  
-    )
-    }
+    )}
     export default ItemDetailContainer
