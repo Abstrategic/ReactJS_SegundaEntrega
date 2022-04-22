@@ -1,6 +1,6 @@
-import { useContext, useReducer, useState, useEffect } from "react"
+import { useContext, useReducer, useState } from "react"
 import { NavLink } from 'react-router-dom'
-import { createOrderAndUpdateStock, getOrders } from "../../services/firebase/firestore"
+import { createOrderAndUpdateStock } from "../../services/firebase/firestore"
 import CloseIcon from '../../img/close.png'
 import EmptyImg from '../../img/Empty.png'
 import Successimg from '../../img/success.png'
@@ -61,7 +61,7 @@ const Cart = () => {
 
         return (
         <div className="successContainer">
-            <img className="imgEmpty" src={Successimg} alt='Empty image'></img>
+            <img className="imgEmpty" src={Successimg} alt='ilustracion sucessfull'></img>
             <p className="titlEmpt">Your order was sucessfully sended</p>
             <p className="bd">We have just sent your online invoice to the email address <b>{formData.email}</b></p>
             <p className="stSuccess">Order Details</p>
@@ -79,7 +79,7 @@ const Cart = () => {
     if(cart.length === 0) {
         return (
         <div className="emptyContainer">
-            <img className="imgEmpty" src={EmptyImg} alt='Empty image'></img>
+            <img className="imgEmpty" src={EmptyImg} alt='carrito vacio'></img>
             <p className="titlEmpt">Your cart is empty</p>
             <p className="bdEmpty">Looks like you have not added anything to you cart. Go ahead and Explore some item</p>
             <NavLink to='/' className="directionLink">Find new articles</NavLink>
